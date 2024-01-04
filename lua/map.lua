@@ -157,5 +157,6 @@ map("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string u
 -- map({ "<leader>bP", "<Cmd>BufferLineGroupClose ungrouped<CR>", desc = "Delete non-pinned buffers" })
 -- buffers
 
+-- [[sniprun]]
 
-
+map('n', '<F5>', ":let b:caret=winsaveview() <CR> | :%SnipRun <CR> | :call winrestview(b:caret) <CR>", {})
