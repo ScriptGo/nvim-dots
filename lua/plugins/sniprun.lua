@@ -46,7 +46,7 @@ return {
               terminal_signcolumn = false,  --# whether show signcolumn in terminal window
               terminal_persistence = true,  --# always keep the terminal open (true) or close it at every occasion (false)
               terminal_width = 45,          --# change the terminal display option width
-              notification_timeout = 5      --# timeout for nvim_notify output
+              notification_timeout = 9      --# timeout for nvim_notify output
             },
 
             --# You can use the same keys to customize whether a sniprun producing
