@@ -4,17 +4,6 @@ return {
     lazy = true,
     event = { "BufWritePre" },
     cmd = { "ConformInfo" },
-    keys = {
-      {
-        -- Customize or remove this keymap to your liking
-        "<F6>",
-        function()
-          require("conform").format({ async = true, lsp_fallback = true })
-        end,
-        mode = { "n", "v" },
-        desc = "Format buffer",
-      },
-    },
     -- Everything in opts will be passed to setup()
     opts = {
       -- Define your formatters
