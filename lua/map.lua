@@ -1,15 +1,15 @@
 -- 绑定格式: vim.keymap.set(模式, 新按键, 原始按键, 选项)
 local map = vim.keymap.set
 local opts = {
-    noremap = true,  -- 非递归绑定
-    silent  = true,  -- 不显示消息
+	noremap = true, -- 非递归绑定
+	silent = true, -- 不显示消息
 }
 
 -- 禁用方向键
-map({ 'n', 'i', 'v' }, '<Left>', '<Nop>', opts)
-map({ 'n', 'i', 'v' }, '<Right>', '<Nop>', opts)
-map({ 'n', 'i', 'v' }, '<Up>', '<Nop>', opts)
-map({ 'n', 'i', 'v' }, '<Down>', '<Nop>', opts)
+map({ "n", "i", "v" }, "<Left>", "<Nop>", opts)
+map({ "n", "i", "v" }, "<Right>", "<Nop>", opts)
+map({ "n", "i", "v" }, "<Up>", "<Nop>", opts)
+map({ "n", "i", "v" }, "<Down>", "<Nop>", opts)
 
 -- better indenting
 map("v", "<", "<gv")
@@ -30,7 +30,6 @@ map("n", "P", "P`[") -- Paste yank before, keep cursor position
 vim.cmd('nnoremap <leader>p "*p') -- Paste content from OS's clipboard
 vim.cmd('vnoremap <leader>y "*y') -- Yank content in OS's clipboard
 
-
 -- Move Lines
 map("n", "<A-j>", "<cmd>m .+1<CR>==", { desc = "Move down" })
 map("n", "<A-k>", "<cmd>m .-2<CR>==", { desc = "Move up" })
@@ -46,29 +45,29 @@ map("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
 --[[功能键]]
 
 -- 废弃F1
-map({ 'n', 'i', 'v' }, '<F1>', '<ESC>', opts)
+map({ "n", "i", "v" }, "<F1>", "<ESC>", opts)
 
 --[[插入模式]]
 
-map('i', 'jj', '<ESC>', opts)                -- 替代 Esc
-map('i', '<C-s>', '<C-o>:w!<CR>', opts)      -- 快速保存
-map('i', '<C-q>', '<ESC>:wq!<CR>', opts)     -- 关闭
+map("i", "jj", "<ESC>", opts) -- 替代 Esc
+map("i", "<C-s>", "<C-o>:w!<CR>", opts) -- 快速保存
+map("i", "<C-q>", "<ESC>:wq!<CR>", opts) -- 关闭
 
 -- 在当前行的上方/下方插入新行
-map('i', '<S-enter>', '<C-o>O', opts)
-map('i', '<C-enter>', '<C-o>o', opts)
+map("i", "<S-enter>", "<C-o>O", opts)
+map("i", "<C-enter>", "<C-o>o", opts)
 
 -- 移动到行首/到行尾
-map('i', '<C-a>', '<Home>', opts)
-map('i', '<C-e>', '<End>', opts)
+map("i", "<C-a>", "<Home>", opts)
+map("i", "<C-e>", "<End>", opts)
 
 -- 向左/右移动
-map('i', '<C-b>', '<Left>', opts)
-map('i', '<C-f>', '<Right>', opts)
+map("i", "<C-b>", "<Left>", opts)
+map("i", "<C-f>", "<Right>", opts)
 
--- 直上/直下移动 
-map('i', '<C-j>', '<C-\\><C-o>gj', opts)
-map('i', '<C-k>', '<C-\\><C-o>gk', opts)
+-- 直上/直下移动
+map("i", "<C-j>", "<C-\\><C-o>gj", opts)
+map("i", "<C-k>", "<C-\\><C-o>gk", opts)
 
 -- 快速输入符号
 map("i", "uu", "_")
@@ -81,16 +80,16 @@ map("i", "vv", ":=")
 -- [[窗口]]
 
 -- 窗口管理
-map("n", "vp", "<C-w>v", opts)                 -- 垂直分割窗口
-map("n", "hp", "<C-w>s", opts)                 -- 水平分割窗口
-map("n", "we", "<C-w>=", opts)                 -- make split windows equal width & height
-map("n", "wc", "<C-w>c", opts)                 -- 关闭当前分割窗口
+map("n", "vp", "<C-w>v", opts) -- 垂直分割窗口
+map("n", "hp", "<C-w>s", opts) -- 水平分割窗口
+map("n", "we", "<C-w>=", opts) -- make split windows equal width & height
+map("n", "wc", "<C-w>c", opts) -- 关闭当前分割窗口
 
 -- 窗口导航
-map('n', '<C-h>', '<C-w>h', opts)
-map('n', '<C-j>', '<C-w>j', opts)
-map('n', '<C-k>', '<C-w>k', opts)
-map('n', '<C-l>', '<C-w>l', opts)
+map("n", "<C-h>", "<C-w>h", opts)
+map("n", "<C-j>", "<C-w>j", opts)
+map("n", "<C-k>", "<C-w>k", opts)
+map("n", "<C-l>", "<C-w>l", opts)
 
 -- 调整窗口
 map("n", "<A-Up>", "<cmd>resize +2<CR>", opts)
@@ -106,13 +105,10 @@ map("t", "<C-j>", "<C-\\><C-n><C-w>j", opts)
 map("t", "<C-k>", "<C-\\><C-n><C-w>k", opts)
 map("t", "<C-l>", "<C-\\><C-n><C-w>l", opts)
 
-
-
 -- [[Quickfix]]
 
 map("n", "<leader>xl", "<cmd>lopen<cr>", { desc = "Location List" })
 map("n", "<leader>xq", "<cmd>copen<cr>", { desc = "Quickfix List" })
-
 
 -- [[tabs]]
 map("n", "<leader><tab>l", "<cmd>tablast<cr>", { desc = "Last Tab" })
@@ -130,12 +126,8 @@ map("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to n
 map("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 map("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
-
 -- Toggle diff buffers
 map("n", "<leader>dft", "&diff ? ':windo diffoff<cr>' : ':windo diffthis<cr>'", { expr = true })
-
-
-
 
 -- [[nvim-tree]]
 
@@ -150,13 +142,8 @@ map("n", "<leader>h", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent
 map("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
 map("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
 
-
 -- [[bufferline]]
 
 -- map({ "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle pin" })
 -- map({ "<leader>bP", "<Cmd>BufferLineGroupClose ungrouped<CR>", desc = "Delete non-pinned buffers" })
 -- buffers
-
--- [[sniprun]]
-
-map('n', '<F5>', ":let b:caret=winsaveview() <CR> | :%SnipRun <CR> | :call winrestview(b:caret) <CR>", {})
