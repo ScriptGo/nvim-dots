@@ -49,9 +49,12 @@ map({ "n", "i", "v" }, "<F1>", "<ESC>", opts)
 
 --[[插入模式]]
 
-map("i", "jj", "<ESC>", opts) -- 替代 Esc
-map("i", "<C-s>", "<C-o>:w!<CR>", opts) -- 快速保存
-map("i", "<C-q>", "<ESC>:wq!<CR>", opts) -- 关闭
+-- 替代 Esc
+map("i", "jj", "<ESC>", opts)
+
+-- 快速保存/关闭
+map("i", "<C-s>", "<C-o>:w!<CR>", opts) 
+map("i", "<C-q>", "<ESC>:wq!<CR>", opts)
 
 -- 在当前行的上方/下方插入新行
 map("i", "<S-enter>", "<C-o>O", opts)
@@ -62,8 +65,8 @@ map("i", "<C-a>", "<Home>", opts)
 map("i", "<C-e>", "<End>", opts)
 
 -- 向左/右移动
-map("i", "<C-b>", "<Left>", opts)
-map("i", "<C-f>", "<Right>", opts)
+map("i", "<C-h>", "<Left>", opts)
+map("i", "<C-l>", "<Right>", opts)
 
 -- 直上/直下移动
 map("i", "<C-j>", "<C-\\><C-o>gj", opts)

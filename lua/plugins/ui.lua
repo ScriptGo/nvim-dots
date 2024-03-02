@@ -58,10 +58,6 @@ return {{
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     dependencies = {"nvim-tree/nvim-web-devicons"},
-    config = function()
-        local lualine = require("lualine")
-        local lazy_status = require("lazy.status") -- to configure lazy pending updates count
-    end
 }, {'navarasu/onedark.nvim', 'luisiacc/gruvbox-baby', {
     'sainnhe/gruvbox-material',
     config = function()
