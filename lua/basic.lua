@@ -48,6 +48,10 @@ set.listchars        = {
   eol = '⏎',
   trail = '␣'
 }
+
+-- 字体
+vim.o.guifont = "Fira Code,Sarasa Term SC:h14"
+
 -- 鼠标
 set.mouse            = "a"               -- 启用鼠标
 set.selectmode       = {"mouse", "key"}  -- 使用鼠标或按键进行选择
