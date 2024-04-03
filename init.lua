@@ -1,4 +1,4 @@
 require('basic')
- require('plugin')
- require('map')
+require('plugin')
+require('map')
 
