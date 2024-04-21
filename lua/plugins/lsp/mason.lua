@@ -28,8 +28,8 @@ return {
 			-- list of servers for mason to install
 			ensure_installed = {
 				"bashls",
-				"html",
 				"cssls",
+				"html",
 				"lua_ls",
 				"graphql",
 				"pyright",

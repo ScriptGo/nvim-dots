@@ -133,7 +133,7 @@ vim.g.loaded_ruby_provider     = 0
 vim.g.loaded_node_provider     = 0
 
 -- 其他
-vim.g.python3_host_prog = "/usr/bin/python"
+vim.g.python3_host_prog = "$HOME/.venvs/study/bin/python"
 vim.g.markdown_recommended_style = 0   -- Fix markdown indentation settings
 set.grepprg     = "rg --vimgrep --no-heading --smart-case"
 set.grepformat  = "%f:%l:%c:%m,%f:%l:%m"

@@ -5,7 +5,6 @@ return {
 		local lint = require("lint")
 
 		lint.linters_by_ft = {
-			markdownlit = { "markdownlit" },
 			python = { "pylint" },
 		}
 
@@ -17,9 +16,5 @@ return {
 				lint.try_lint()
 			end,
 		})
-
-		vim.keymap.set("n", "<leader>l", function()
-			lint.try_lint()
-		end, { desc = "Trigger linting for current file" })
 	end,
 }
