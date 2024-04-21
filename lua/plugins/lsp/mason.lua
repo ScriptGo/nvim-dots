@@ -43,6 +43,7 @@ return {
 				"isort", -- python formatter
 				"black", -- python formatter
 				"flake8",
+				"markdownlint",
 			},
 		})
 	end,
