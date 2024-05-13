@@ -6,12 +6,12 @@ return {
 
 		conform.setup({
 			formatters_by_ft = {
+				bash = { "shfmt" },
 				css = { "prettier" },
 				html = { "prettier" },
 				json = { "prettier" },
 				yaml = { "prettier" },
 				markdown = { "prettier" },
-				graphql = { "prettier" },
 				lua = { "stylua" },
 				python = { "isort", "black" },
 			},
@@ -19,6 +19,11 @@ return {
 				lsp_fallback = true,
 				async = false,
 				timeout_ms = 1000,
+			},
+			shfmt = {
+				inherit = false,
+				command = "shfmt",
+				args = { "-i", "2", "-filename", "$FILENAME" },
 			},
 		})
 	end,

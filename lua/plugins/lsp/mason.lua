@@ -31,7 +31,7 @@ return {
 				"cssls",
 				"html",
 				"lua_ls",
-				"pylsp",
+				"pyright",
 			},
 		})
 
@@ -41,7 +41,7 @@ return {
 				"stylua", -- lua formatter
 				"isort", -- python formatter
 				"black", -- python formatter
-				"markdownlint",
+				"markdownlint", -- markdwon formatter
 			},
 		})
 	end,
