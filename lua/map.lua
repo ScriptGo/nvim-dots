@@ -132,21 +132,30 @@ map("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new
 -- Toggle diff buffers
 map("n", "<leader>dft", "&diff ? ':windo diffoff<cr>' : ':windo diffthis<cr>'", { expr = true })
 
+-- [[bufferline]]
+
+-- map({ "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle pin" })
+-- map({ "<leader>bP", "<Cmd>BufferLineGroupClose ungrouped<CR>", desc = "Delete non-pinned buffers" })
+-- buffers
+
 -- [[nvim-tree]]
 
 map("n", "<F2>", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" }) -- toggle file explorer
 map("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" }) -- collapse file explorer
 map("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" }) -- refresh file explorer
 
+-- [[nvim-surround]
+
+-- y
+-- [[markdown]]
+
+map("n", "<leader>mp", "<cmd>MarkdownPreviewToggle<cr>")
+
 -- [[telescope]]
 
-map("n", "<leader>f", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
-map("n", "<leader>h", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
-map("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
+map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
+map("n", "<leader>fh", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
+map("n", "<leader>fz", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
 map("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
-
--- [[bufferline]]
-
--- map({ "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle pin" })
--- map({ "<leader>bP", "<Cmd>BufferLineGroupClose ungrouped<CR>", desc = "Delete non-pinned buffers" })
--- buffers
+map("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
+map("n", "<leader>fp", "<cmd>Telescope git_files<cr>")
