@@ -98,7 +98,6 @@ set.inccommand = "nosplit"
 set.clipboard = "unnamedplus" -- 剪贴板
 set.confirm = true -- 在处理未保存或只读文件的时候，弹出确认
 set.autowrite = true -- 自动保存文件
-set.browsedir = "buffer" -- 设定文件浏览器目录为当前目录
 set.autochdir = true -- 自动切换当前目录为当前文件所在的目录
 set.backup = false -- 禁止创建备份文件
 set.writebackup = false
