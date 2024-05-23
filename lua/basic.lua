@@ -18,7 +18,6 @@ vim.g.maplocalleader = " "
 
 -- UI
 set.number = true -- 显示行号
-set.relativenumber = true -- 显示相对行号
 set.signcolumn = "yes" -- 显示左侧图标指示列
 set.cursorline = true -- 高亮当前在行
 set.colorcolumn = "80" -- 右侧参考线
@@ -136,8 +135,3 @@ vim.g.python3_host_prog = "/usr/bin/python"
 vim.g.markdown_recommended_style = 0 -- Fix markdown indentation settings
 set.grepprg = "rg --vimgrep --no-heading --smart-case"
 set.grepformat = "%f:%l:%c:%m,%f:%l:%m"
-
-vim.cmd([[
-  autocmd BufRead,BufNewFile *.red,*.reds set filetype=red
-  autocmd BufRead,BufNewFile *.red,*.reds set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
-]])

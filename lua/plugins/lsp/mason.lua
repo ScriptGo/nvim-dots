@@ -39,6 +39,7 @@ return {
 			ensure_installed = {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
+				"shfmt", -- shell formatter
 				"isort", -- python formatter
 				"black", -- python formatter
 				"markdownlint", -- markdwon formatter
