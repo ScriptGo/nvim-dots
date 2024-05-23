@@ -84,12 +84,6 @@ return {
 					capabilities = capabilities,
 				})
 			end,
-			["pyright"] = function()
-				lspconfig["pyright"].setup({
-					on_attach = custom_attach,
-					capabilities = capabilities,
-				})
-			end,
 			["lua_ls"] = function()
 				-- configure lua server (with special settings)
 				lspconfig["lua_ls"].setup({
