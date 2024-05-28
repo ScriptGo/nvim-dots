@@ -1,8 +1,8 @@
 -- 绑定格式: vim.keymap.set(模式, 新按键, 原始按键, 选项)
 local map = vim.keymap.set
 local opts = {
-	noremap = true, -- 非递归绑定
-	silent = true, -- 不显示消息
+	noremap = true,
+	silent = true,
 }
 
 -- 禁用方向键
@@ -53,7 +53,7 @@ map({ "n", "i", "v" }, "<F1>", "<ESC>", opts)
 map("i", "jj", "<ESC>", opts)
 
 -- 快速保存/关闭
-map("i", "<C-s>", "<C-o>:w!<CR>", opts) 
+map("i", "<C-s>", "<C-o>:w!<CR>", opts)
 map("i", "<C-q>", "<ESC>:wq!<CR>", opts)
 
 -- 在当前行的上方/下方插入新行
@@ -144,9 +144,13 @@ map("n", "<F2>", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" }) -
 map("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" }) -- collapse file explorer
 map("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" }) -- refresh file explorer
 
--- [[nvim-surround]
+-- [[nvim-surround]]
 
--- y
+-- ds : 删除配对符号
+-- cs : 修改配对符号
+-- ys : 添加配对符号
+-- yss : 为整行添加配对符号
+
 -- [[markdown]]
 
 map("n", "<leader>mp", "<cmd>MarkdownPreviewToggle<cr>")
