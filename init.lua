@@ -1,9 +1,9 @@
-if exists("g:vscode")
+if vim.g.vscode then
     -- VSCode
 else
     -- neovim
     require('basic')
     require('plugin')
     require('map')
-endif
+end
 
