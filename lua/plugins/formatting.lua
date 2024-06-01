@@ -13,6 +13,7 @@ return {
 				markdown = { "prettier" },
 				bash = { "shfmt" },
 				lua = { "stylua" },
+				},
 			format_on_save = {
 				lsp_fallback = true,
 				async = false,
