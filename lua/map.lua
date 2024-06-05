@@ -139,7 +139,6 @@ map("n", "<leader>dft", "&diff ? ':windo diffoff<cr>' : ':windo diffthis<cr>'", 
 -- buffers
 
 -- [[nvim-tree]]
-
 map("n", "<F2>", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" }) -- toggle file explorer
 map("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" }) -- collapse file explorer
 map("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" }) -- refresh file explorer
@@ -162,4 +161,4 @@ map("n", "<leader>fh", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recen
 map("n", "<leader>fz", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
 map("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
 map("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
-map("n", "<leader>fp", "<cmd>Telescope git_files<cr>")
+map("n", "<leader>fg", "<cmd>Telescope git_files<cr>")
