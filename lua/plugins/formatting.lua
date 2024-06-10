@@ -13,7 +13,6 @@ return {
 				markdown = { "prettier" },
 				bash = { "shfmt" },
 				lua = { "stylua" },
-				python = {"isort", "black"},
 			},
 			format_on_save = {
 				lsp_fallback = true,
