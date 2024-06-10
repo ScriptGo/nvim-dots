@@ -31,7 +31,6 @@ return {
 				-- "cssls",
 				-- "html",
 				-- "lua_ls",
-				-- "pyright",
 			},
 		})
 
@@ -41,8 +40,6 @@ return {
 				-- "stylua",
 				-- "shfmt",
 				-- "markdownlint",
-				-- "isort",
-				-- "black",
 			},
 		})
 	end,
